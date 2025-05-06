@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>History Whitelist Manager</title>
+  <link rel="stylesheet" href="popup.css">
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Allowlist Domains</h1>
+    <form id="add-form">
+      <input type="text" id="regex-input" placeholder="Enter domain regex" required />
+      <button type="submit">Add</button>
+    </form>
+    <div class="examples">
+      <span style="font-size:0.88em;color:#64748b;">Examples:</span>
+      <ul class="example-list">
+        <li>^https://.*\\.google\\.com/</li>
+        <li>^https://news\\.ycombinator\\.com/</li>
+        <li>^https://.*\\.edu/</li>
+      </ul>
+    </div>
+    <div class="switch-row">
+      <span class="incognito-label">Apply to Incognito as well</span>
+      <label class="switch">
+        <input type="checkbox" id="incognito-switch" />
+        <span class="slider"></span>
+      </label>
+    </div>
+    <ul id="whitelist-list"></ul>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html> 
